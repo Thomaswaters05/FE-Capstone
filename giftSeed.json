@@ -1,0 +1,25 @@
+{
+    "users": {
+        "user0": {
+            "name": "Tommy Waters",
+            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+        },
+        "user1": {
+            "name": "Miller Waters",
+            "uid": "TotsfegmVhaMBNTKIPRNclOnqTV2"
+        },
+        "user2": {
+            "name": "Erica Waters",
+            "uid": "5HM94xZhzYWWlPRpAmvnljROOMK2"
+        }
+    },
+    "items": {
+        "item0": {
+            "gift": "PS3",
+            "isCompleted": true,
+            "assignedTo": "Tommy Waters",
+            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+        }
+    }
+
+}
