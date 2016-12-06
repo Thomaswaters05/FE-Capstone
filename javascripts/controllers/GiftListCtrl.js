@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("ItemListCtrl", function($scope, $rootScope, GiftFactory){
+app.controller("GiftListCtrl", function($scope, $rootScope, GiftFactory){
   $scope.welcome = "hello";     // this is like a console log AKA it tests it
   $scope.items = [];    //we put this info (data for people/to do items/etc) in FB database
 

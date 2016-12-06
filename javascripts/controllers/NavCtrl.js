@@ -8,7 +8,7 @@ app.controller("NavCtrl", function($scope){
   },
     {
       name:"All Gifts",
-      url:" "
+      url:"#/gift-list "
   },
     {
       name:"New Gifts",

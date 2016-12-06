@@ -15,9 +15,28 @@
     },
     "items": {
         "item0": {
+            "giftfor": "Erica",
             "gift": "PS3",
+            "cost": "250",
             "isCompleted": true,
             "assignedTo": "Tommy Waters",
+            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+        },
+
+         "item1": {
+            "giftfor": "Mom",
+            "gift": "Necklace",
+            "cost": "$50",
+            "isCompleted": true,
+            "assignedTo": "Mom",
+            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+        },
+         "item2": {
+            "giftfor": "Miller",
+            "gift": "Toy Truck",
+            "cost": "$10",
+            "isCompleted": true,
+            "assignedTo": "Miller",
             "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
         }
     }

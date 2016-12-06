@@ -48,7 +48,7 @@ app.factory("AuthFactory", function($q, $http, $rootScope, FIREBASE_CONFIG) {
     });
   };
 
-//Firebase: GOOGLE - Use input credentials to authenticate user.
+// Firebase: GOOGLE - Use input credentials to authenticate user. -- STRETCH GOAL
   let authenticateGoogle = () => {
     return $q((resolve, reject) => {
       var provider = new firebase.auth.GoogleAuthProvider();
