@@ -1,5 +1,5 @@
-<!-- *******SEARCHES FOR CURRENT LISTS OR COMPLETED LISTS ********* -->
-<h1>My Gift Lists</h1>
+<h1>Erica's List</h1>
+
 <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
         <div class="input-group">
@@ -10,17 +10,33 @@
         </div>
     </div>
 </div>
-<!-- *******SEARCHES FOR CURRENT LISTS OR COMPLETED LISTS ********* -->
 
+
+<!-- table class=" table table hover">
+  <tr>
+    <th>Item</th>
+    <th>Cost</th>
+  </tr>
+
+</div>
+
+<div>
+  <tr ng-repeat="item in items | filter: searchText"">
+    <div>
+      <td>{{item.gift}}</td>
+      <td>{{item.cost}}</td>
+    </div>
+</div>
+ -->
 
 <!-- *******CURRENT LIST LOGIC********* -->
 <h3>Current Lists</h3>
-<div ng-repeat="item in items| filter: {isCompleted:false} | filter: searchText">
+<div ng-repeat="item in listgifts| filter: {isCompleted:false} | filter: searchText">
 
       <div class="panel-body">
          <div class="col-xs-3"><input type="checkbox" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
-         <div class="col-xs-3"><a href="#/erica-example">{{item.assignedTo}}</a></div>
-         <div class="col-xs-3">{{item.cost}}</div>
+         <div class="col-xs-3">{{item.usergift}}</div>
+         <div class="col-xs-3">{{item.usercost}}</div>
          <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div>
@@ -28,28 +44,12 @@
 
 <!-- *******PURCHASED LIST LOGIC********* -->
 <h3>Purchased</h3>
-<div ng-repeat="item in items| filter: {isCompleted:true} | filter: searchText">
+<div ng-repeat="item in listgifts| filter: {isCompleted:true} | filter: searchText">
 
       <div class="panel-body">
          <div class="col-xs-5"><input type="checkbox" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
-         <div class="col-xs-5">{{item.assignedTo}}</div>
+         <div class="col-xs-5">{{item.usergift}}</div>
+         <div class="col-xs-5">{{item.usercost}}</div>
          <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div>
-<!-- *******PURCHASED LIST LOGIC********* -->
-
-<!-- *******BUDGET LOGIC- TOTAL OF AMOUNT NEEDED FOR GIFTS********* -->
-
-<h6>BUDGET GOES HERE:</h6>
-
-
-<!-- *******BUDGET LOGIC- TOTAL OF AMOUNT NEEDED FOR GIFTS********* -->
-
-
-
-
-
-
-
-
-

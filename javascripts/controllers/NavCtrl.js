@@ -12,7 +12,7 @@ app.controller("NavCtrl", function($scope){
   },
     {
       name:"New Gifts",
-      url:" "
+      url:"#/gift-new"
   }
   ];    // this is making an array and calling it navitems - THESE ITEMS NEED TO MATCH AS THEY DO IN HTML (NAV)
 });

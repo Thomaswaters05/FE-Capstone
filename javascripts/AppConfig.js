@@ -43,6 +43,11 @@ app.config(function($routeProvider){
       templateUrl: 'partials/auth.html', //see partials folder- auth- this logs in user
       controller: 'AuthCtrl' // see new controller file
     })
+     .when('/gift-main', {
+      templateUrl: '/partials/mainscreen.html', //see partials folder
+      controller: 'GiftListCtrl', // see new controller file
+      resolve: {isAuth}
+    })
     .when('/gift-list', {
       templateUrl: '/partials/giftList.html', //see partials folder
       controller: 'GiftListCtrl', // see new controller file
@@ -50,6 +55,11 @@ app.config(function($routeProvider){
     })
     .when('/gift-new', {
       templateUrl: '/partials/giftnew.html', //see partials folder
+      controller: 'GiftNewCtrl', // see new controller file
+      resolve: {isAuth}
+    })
+    .when('/erica-example', {
+      templateUrl: '/partials/ericaexample.html', //see partials folder
       controller: 'GiftListCtrl', // see new controller file
       resolve: {isAuth}
     })

@@ -7,10 +7,15 @@ app.controller("GiftNewCtrl", function($scope, $rootScope, $location, GiftFactor
     $scope.newGift.isCompleted = false; //you must define new task above (basically as a variable/empty obj) and set to false
     $scope.newGift.uid = $rootScope.user.uid;
     GiftFactory.postNewItem($scope.newGift).then(function(itemId){
-      $location.url("/items/list");
+      $location.url("/gift-list");
       $scope.newGift = {};
     });
-  };
 
 
-});
+    };
+
+
+  });
+
+
+

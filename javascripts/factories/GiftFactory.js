@@ -24,9 +24,10 @@ var postNewItem = function(newItem){ //this will put the info in to the FB datab
     $http.post(`${FIREBASE_CONFIG.databaseURL}/items.json`,
       JSON.stringify({
         assignedTo: newItem.assignedTo,
-        isCompleted: newItem.isCompleted,
         gift: newItem.gift,
-        uid: newItem.uid
+        cost: newItem.cost,
+        uid: newItem.uid,
+        isCompleted: newItem.isCompleted
       })
       )
       .success(function(postResponse){
