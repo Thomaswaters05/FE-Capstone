@@ -15,44 +15,38 @@
     },
     "items": {
         "item0": {
-            "giftfor": "Erica",
-            "gift": "PS3",
+            "assignedTo": "Tommy Waters",
             "cost": "250",
             "isCompleted": false,
-            "assignedTo": "Tommy Waters",
             "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
         },
 
          "item1": {
-            "giftfor": "Mom",
-            "gift": "Necklace",
+            "assignedTo": "Mom",
             "cost": "50",
             "isCompleted": false,
-            "assignedTo": "Mom",
             "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
         },
          "item2": {
-            "giftfor": "Miller",
-            "gift": "Toy Truck",
+            "assignedTo": "Miller",
             "cost": "10",
             "isCompleted": false,
-            "assignedTo": "Miller",
             "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
         }
     },
     "listgifts": {
         "gift0": {
+            "assignedTo": "Tommy Waters",
             "usergift": "Diamond Ring",
             "usercost": "250",
             "isCompleted": false,
-            "assignedTo": "Tommy Waters",
             "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
         },
 
          "gift1": {
             "usergift": "Necklace",
             "usercost": "50",
-            "isCompleted": false,
+            "isCompleted": true,
             "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
         },
          "gift2": {

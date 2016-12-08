@@ -1,10 +1,12 @@
+// *****ADDING SECOND CONTROLLER FOR OTHER JSON DATA*****
+
 "use strict";
 
-app.factory("GiftFactory", function($q, $http, FIREBASE_CONFIG){
+app.factory("NewGiftFactory", function($q, $http, FIREBASE_CONFIG){
 
   var getItemList = function(userId){
     return $q((resolve, reject)=>{
-      $http.get(`${FIREBASE_CONFIG.databaseURL}/items.json?orderBy="uid"&equalTo="${userId}"`)  //items.json corresponds to the FB DATABASE ITSELF
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/items.json?orderBy="uid"&equalTo="${userId}"`)
       .success(function(response){
         let items = [];
         Object.keys(response).forEach(function(key){

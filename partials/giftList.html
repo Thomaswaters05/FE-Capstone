@@ -19,12 +19,13 @@
 
       <div class="panel-body">
          <div class="col-xs-3"><input type="checkbox" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
-         <div class="col-xs-3"><a href="#/erica-example">{{item.assignedTo}}</a></div>
+         <div class="col-xs-3"><a href="#/wishlist:{{item.assignedTo}}"><button>{{item.assignedTo}}</button></a></div>
          <div class="col-xs-3">{{item.cost}}</div>
          <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div>
 <!-- *******CURRENT LIST LOGIC********* -->
+
 
 <!-- *******PURCHASED LIST LOGIC********* -->
 <h3>Purchased</h3>
@@ -33,6 +34,7 @@
       <div class="panel-body">
          <div class="col-xs-5"><input type="checkbox" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
          <div class="col-xs-5">{{item.assignedTo}}</div>
+          <div class="col-xs-3">{{item.cost}}</div>
          <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div>
@@ -40,7 +42,7 @@
 
 <!-- *******BUDGET LOGIC- TOTAL OF AMOUNT NEEDED FOR GIFTS********* -->
 
-<h6>BUDGET GOES HERE:</h6>
+<h6>BUDGET GOES HERE::</h6>
 
 
 <!-- *******BUDGET LOGIC- TOTAL OF AMOUNT NEEDED FOR GIFTS********* -->

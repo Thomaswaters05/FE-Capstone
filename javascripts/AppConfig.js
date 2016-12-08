@@ -58,9 +58,14 @@ app.config(function($routeProvider){
       controller: 'GiftNewCtrl', // see new controller file
       resolve: {isAuth}
     })
-    .when('/erica-example', {
-      templateUrl: '/partials/ericaexample.html', //see partials folder
-      controller: 'GiftListCtrl', // see new controller file
+    .when('/gift-add', {
+      templateUrl: '/partials/addgift.html', //see partials folder
+      controller: 'GiftNewCtrl', // see new controller file
+      resolve: {isAuth}
+    })
+    .when('/wishlist:id', {
+      templateUrl: '/partials/userwishlist.html', //see partials folder
+      controller: 'UserWishListCtrl', // see new controller file
       resolve: {isAuth}
     })
     .otherwise('/auth');

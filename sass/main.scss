@@ -20,7 +20,15 @@ h3{
     }
 }
 
+// Styling for the header and Navigation
+a[ng-click]{
+    cursor: pointer;
 
+}
+
+.buttonMargin{
+  margin: 80px;
+}
 
 // *****NAVBAR*****
 .navbar-custom {

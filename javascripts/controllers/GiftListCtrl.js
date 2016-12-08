@@ -1,17 +1,17 @@
 "use strict";
 
-app.controller("GiftListCtrl", function($scope, $rootScope, GiftFactory){
+app.controller("GiftListCtrl", function($scope, $rootScope, $location, GiftFactory, NewGiftFactory){
   $scope.welcome = "hello";     // this is like a console log AKA it tests it
   $scope.items = [];    //we put this info (data for people/to do items/etc) in FB database
   $scope.listgifts = [];
 
   let getItems = function(){
+    console.log($rootScope.user.uid)
     GiftFactory.getItemList($rootScope.user.uid).then(function(items){ //what is here needs to be right below this
       $scope.items = items;
     });
   };
   getItems();
-
 
 
   $scope.deleteItem = function(itemId){

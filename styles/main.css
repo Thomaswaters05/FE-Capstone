@@ -14,6 +14,12 @@ h3 {
   #mainz li {
     margin: 50px; }
 
+a[ng-click] {
+  cursor: pointer; }
+
+.buttonMargin {
+  margin: 80px; }
+
 .navbar-custom {
   background-color: #2b854f;
   border-color: #236c40;

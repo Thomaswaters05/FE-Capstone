@@ -1,16 +1,4 @@
-<h1>Erica's List</h1>
-
-<div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
-        <div class="input-group">
-            <span class="input-group-btn">
-                <button class="btn btn-default"><i class="fa fa-tree"></i></button>
-            </span>
-            <input type="text" class="form-control" placeholder="Search for ..." ng-model="searchText">
-        </div>
-    </div>
-</div>
-
+<h1>{{Users}} Wish List</h1>
 
 <!-- table class=" table table hover">
   <tr>
@@ -28,15 +16,16 @@
     </div>
 </div>
  -->
+ <a href="#/gift-add"><button>Add Gift</button></a>
 
 <!-- *******CURRENT LIST LOGIC********* -->
-<h3>Current Lists</h3>
-<div ng-repeat="item in listgifts| filter: {isCompleted:false} | filter: searchText">
+
+<div ng-repeat="gift in listgifts">
 
       <div class="panel-body">
-         <div class="col-xs-3"><input type="checkbox" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
-         <div class="col-xs-3">{{item.usergift}}</div>
-         <div class="col-xs-3">{{item.usercost}}</div>
+         <div class="col-xs-3"><input type="checkbox" ng-model="gift.isCompleted" ng-change="inputChange(gift)"></div>
+         <div class="col-xs-3">{{gift.usergift}}</div>
+         <div class="col-xs-3">{{gift.usercost}}</div>
          <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div>
@@ -44,7 +33,7 @@
 
 <!-- *******PURCHASED LIST LOGIC********* -->
 <h3>Purchased</h3>
-<div ng-repeat="item in listgifts| filter: {isCompleted:true} | filter: searchText">
+<div ng-repeat="item in listgifts">
 
       <div class="panel-body">
          <div class="col-xs-5"><input type="checkbox" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>

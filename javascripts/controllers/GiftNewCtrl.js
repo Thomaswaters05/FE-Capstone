@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("GiftNewCtrl", function($scope, $rootScope, $location, GiftFactory){
+app.controller("GiftNewCtrl", function($scope, $rootScope, $location, GiftFactory, NewGiftFactory){
   $scope.newGift = {}; // this is making a "new task" and assigning it an empty object
 
   $scope.addNewItem = function(){
@@ -8,6 +8,17 @@ app.controller("GiftNewCtrl", function($scope, $rootScope, $location, GiftFactor
     $scope.newGift.uid = $rootScope.user.uid;
     GiftFactory.postNewItem($scope.newGift).then(function(itemId){
       $location.url("/gift-list");
+      $scope.newGift = {};
+    });
+
+
+    };
+
+  $scope.addGifts = function(){
+    $scope.newGift.isCompleted = false;
+    $scope.newGift.uid = $rootScope.user.uid;
+    GiftFactory.postNewItem($scope.newGift).then(function(itemId){
+      $location.url("#/wishlist:{{item.assignedTo}}");     //NO CLUE IF THIS WORKS- TRYING TO PASS ADD DATA TO USER LIST
       $scope.newGift = {};
     });
 
