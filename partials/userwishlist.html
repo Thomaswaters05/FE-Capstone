@@ -1,0 +1,44 @@
+<h1>{{Users}} Wish List</h1>
+
+<!-- table class=" table table hover">
+  <tr>
+    <th>Item</th>
+    <th>Cost</th>
+  </tr>
+
+</div>
+
+<div>
+  <tr ng-repeat="item in items | filter: searchText"">
+    <div>
+      <td>{{item.gift}}</td>
+      <td>{{item.cost}}</td>
+    </div>
+</div>
+ -->
+ <a href="#/gift-add"><button>Add Gift</button></a>
+
+<!-- *******CURRENT LIST LOGIC********* -->
+
+<div ng-repeat="gift in listgifts">
+
+      <div class="panel-body">
+         <div class="col-xs-3"><input type="checkbox" ng-model="gift.isCompleted" ng-change="inputChange(gift)"></div>
+         <div class="col-xs-3">{{gift.usergift}}</div>
+         <div class="col-xs-3">{{gift.usercost}}</div>
+         <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
+   </div>
+</div>
+<!-- *******CURRENT LIST LOGIC********* -->
+
+<!-- *******PURCHASED LIST LOGIC********* -->
+<h3>Purchased</h3>
+<div ng-repeat="item in listgifts">
+
+      <div class="panel-body">
+         <div class="col-xs-5"><input type="checkbox" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
+         <div class="col-xs-5">{{item.usergift}}</div>
+         <div class="col-xs-5">{{item.usercost}}</div>
+         <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
+   </div>
+</div>

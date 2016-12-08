@@ -4,6 +4,13 @@ app.controller("AuthCtrl", function($scope, $location, $rootScope, AuthFactory, 
   $scope.loginContainer = true; //these are just variables - this is setting the login container to be DEFAULT on page load
   $scope.registerContainer = false ; //these are just variables
 
+// ****MAKE SURE YOU DELETE THIS FAKE LOG IN***
+  $scope.login = {
+    email: "t@t.com",
+    password:"123456"
+  };
+// ****MAKE SURE YOU DELETE THIS FAKE LOG IN***
+
   if($location.path() === "/logout"){  //$location is the current URL in your browser
     AuthFactory.logout();
     $rootScope.user = {};
@@ -18,7 +25,7 @@ app.controller("AuthCtrl", function($scope, $location, $rootScope, AuthFactory, 
       $rootScope.user = userCreds;
       $scope.login = {};
       $scope.register = {};
-      $location.url("/items/list");
+      $location.url("/gift-main");
     });
 
   };

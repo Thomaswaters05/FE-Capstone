@@ -43,14 +43,29 @@ app.config(function($routeProvider){
       templateUrl: 'partials/auth.html', //see partials folder- auth- this logs in user
       controller: 'AuthCtrl' // see new controller file
     })
-    .when('', {
-      templateUrl: ' ', //see partials folder
-      controller: ' ', // see new controller file
+     .when('/gift-main', {
+      templateUrl: '/partials/mainscreen.html', //see partials folder
+      controller: 'GiftListCtrl', // see new controller file
       resolve: {isAuth}
     })
-    .when(' ', {
-      templateUrl: ' ', //see partials folder
-      controller: ' ', // see new controller file
+    .when('/gift-list', {
+      templateUrl: '/partials/giftList.html', //see partials folder
+      controller: 'GiftListCtrl', // see new controller file
+      resolve: {isAuth}
+    })
+    .when('/gift-new', {
+      templateUrl: '/partials/giftnew.html', //see partials folder
+      controller: 'GiftNewCtrl', // see new controller file
+      resolve: {isAuth}
+    })
+    .when('/gift-add', {
+      templateUrl: '/partials/addgift.html', //see partials folder
+      controller: 'GiftNewCtrl', // see new controller file
+      resolve: {isAuth}
+    })
+    .when('/wishlist:id', {
+      templateUrl: '/partials/userwishlist.html', //see partials folder
+      controller: 'UserWishListCtrl', // see new controller file
       resolve: {isAuth}
     })
     .otherwise('/auth');

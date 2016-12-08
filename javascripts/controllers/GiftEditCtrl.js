@@ -11,7 +11,7 @@ app.controller("GiftEditCtrl", function($scope, $location, $routeParams, GiftFac
   $scope.addNewItem = function(){  //even though this is edit, you MUST use addnewItem()
     GiftFactory.editItem($scope.newTask).then(function(response){
       $scope.newGift = {};
-      $location.url(" ");
+      $location.url("/gift-edit");
 
     });
   };

@@ -15,9 +15,44 @@
     },
     "items": {
         "item0": {
-            "gift": "PS3",
-            "isCompleted": true,
             "assignedTo": "Tommy Waters",
+            "cost": "250",
+            "isCompleted": false,
+            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+        },
+
+         "item1": {
+            "assignedTo": "Mom",
+            "cost": "50",
+            "isCompleted": false,
+            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+        },
+         "item2": {
+            "assignedTo": "Miller",
+            "cost": "10",
+            "isCompleted": false,
+            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+        }
+    },
+    "listgifts": {
+        "gift0": {
+            "assignedTo": "Tommy Waters",
+            "usergift": "Diamond Ring",
+            "usercost": "250",
+            "isCompleted": false,
+            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+        },
+
+         "gift1": {
+            "usergift": "Necklace",
+            "usercost": "50",
+            "isCompleted": true,
+            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+        },
+         "gift2": {
+            "usergift": "Toy Truck",
+            "usercost": "10",
+            "isCompleted": false,
             "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
         }
     }
