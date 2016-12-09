@@ -1,5 +1,5 @@
 <!-- *******SEARCHES FOR CURRENT LISTS OR COMPLETED LISTS ********* -->
-<h1>My Gift Lists</h1>
+<!-- <h1>My Gift Lists</h1>
 <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
         <div class="input-group">
@@ -9,19 +9,19 @@
             <input type="text" class="form-control" placeholder="Search for ..." ng-model="searchText">
         </div>
     </div>
-</div>
+</div> -->
 <!-- *******SEARCHES FOR CURRENT LISTS OR COMPLETED LISTS ********* -->
 
-
+<div ng-controller="GiftListCtrl">
 <!-- *******CURRENT LIST LOGIC********* -->
 <h3>Current Lists</h3>
-<div ng-repeat="item in items| filter: {isCompleted:false} | filter: searchText">
+<div ng-repeat="friend in friends">
 
       <div class="panel-body">
-         <div class="col-xs-3"><input type="checkbox" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
-         <div class="col-xs-3"><a href="#/wishlist:{{item.assignedTo}}"><button>{{item.assignedTo}}</button></a></div>
-         <div class="col-xs-3">{{item.cost}}</div>
-         <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
+         <div class="col-xs-3"><input type="checkbox" ng-model="friend.isCompleted" ng-change="inputChange(friend)"></div>
+         <div class="col-xs-3"><a href="#/wishlist/{{friend.id}}"><button>{{friend.name}}</button></a></div>
+         <div class="col-xs-3">COST</div>
+         <div class="col-xs-2"><button ng-click="deleteItem(friend.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div>
 <!-- *******CURRENT LIST LOGIC********* -->
@@ -29,13 +29,13 @@
 
 <!-- *******PURCHASED LIST LOGIC********* -->
 <h3>Purchased</h3>
-<div ng-repeat="item in items| filter: {isCompleted:true} | filter: searchText">
+<div ng-repeat="friend in friends">
 
       <div class="panel-body">
-         <div class="col-xs-5"><input type="checkbox" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
-         <div class="col-xs-5">{{item.assignedTo}}</div>
-          <div class="col-xs-3">{{item.cost}}</div>
-         <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
+         <div class="col-xs-5"><input type="checkbox" ng-model="friend.isCompleted" ng-change="inputChange(friend)"></div>
+         <div class="col-xs-5">{{friend.name}}</div>
+          <div class="col-xs-3">COST</div>
+         <div class="col-xs-2"><button ng-click="deleteItem(friend.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div>
 <!-- *******PURCHASED LIST LOGIC********* -->
@@ -44,6 +44,8 @@
 
 <h6>BUDGET GOES HERE::</h6>
 
+
+</div>
 
 <!-- *******BUDGET LOGIC- TOTAL OF AMOUNT NEEDED FOR GIFTS********* -->
 

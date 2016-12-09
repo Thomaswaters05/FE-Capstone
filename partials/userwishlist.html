@@ -1,4 +1,4 @@
-<h1>{{Users}} Wish List</h1>
+<h1>{{}} Wish List</h1>
 
 <!-- table class=" table table hover">
   <tr>
@@ -20,12 +20,12 @@
 
 <!-- *******CURRENT LIST LOGIC********* -->
 
-<div ng-repeat="gift in listgifts">
+<div ng-repeat="friend in friends">
+<h1>{{friend.name}} Wish List</h1>
 
       <div class="panel-body">
-         <div class="col-xs-3"><input type="checkbox" ng-model="gift.isCompleted" ng-change="inputChange(gift)"></div>
-         <div class="col-xs-3">{{gift.usergift}}</div>
-         <div class="col-xs-3">{{gift.usercost}}</div>
+         <div class="col-xs-3"><input type="checkbox" ng-model="friend.isCompleted" ng-change="inputChange(friend)"></div>
+         <div class="col-xs-3">{{friend.name}}</div>
          <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div>
@@ -33,12 +33,11 @@
 
 <!-- *******PURCHASED LIST LOGIC********* -->
 <h3>Purchased</h3>
-<div ng-repeat="item in listgifts">
+<div ng-repeat="friend in friends">
 
       <div class="panel-body">
-         <div class="col-xs-5"><input type="checkbox" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
-         <div class="col-xs-5">{{item.usergift}}</div>
-         <div class="col-xs-5">{{item.usercost}}</div>
-         <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
+         <div class="col-xs-5"><input type="checkbox" ng-model="friend.isCompleted" ng-change="inputChange(friend)"></div>
+         <div class="col-xs-5">{{friend.name}}</div>
+         <div class="col-xs-2"><button ng-click="deleteItem(friend.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div>

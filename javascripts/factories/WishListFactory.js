@@ -2,11 +2,11 @@
 
 "use strict";
 
-app.factory("NewGiftFactory", function($q, $http, FIREBASE_CONFIG){
+app.factory("WishListFactory", function($q, $http, FIREBASE_CONFIG){
 
   var getItemList = function(userId){
     return $q((resolve, reject)=>{
-      $http.get(`${FIREBASE_CONFIG.databaseURL}/items.json?orderBy="uid"&equalTo="${userId}"`)
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/gifts.json?orderBy="uid"&equalTo="${userId}"`)
       .success(function(response){
         let items = [];
         Object.keys(response).forEach(function(key){
@@ -21,31 +21,15 @@ app.factory("NewGiftFactory", function($q, $http, FIREBASE_CONFIG){
     });
   };
 
-var getListGifts = function(userId){
-    return $q((resolve, reject)=>{
-      $http.get(`${FIREBASE_CONFIG.databaseURL}/listgifts.json?orderBy="uid"&equalTo="${userId}"`)
-      .success(function(response){
-        let listgifts = [];
-        Object.keys(response).forEach(function(key){
-          response[key].id = key;
-          listgifts.push(response[key]);
-        });
-        resolve(listgifts);
-      })
-      .error(function(errorResponse){
-        reject(errorResponse);
-      });
-    });
-  }; //YOU ADDED THIS TO GET DATA BACK FOR LIST GIFTS!!
+
 
 var postNewItem = function(newItem){ //this will put the info in to the FB database
   return $q((resolve,reject)=>{
-    $http.post(`${FIREBASE_CONFIG.databaseURL}/items.json`,
+    $http.post(`${FIREBASE_CONFIG.databaseURL}/gifts.json`,
       JSON.stringify({
-        assignedTo: newItem.assignedTo,
-        gift: newItem.gift,
-        cost: newItem.cost,
-        uid: newItem.uid,
+        giftdescription: newItem.giftdescription,
+        giftcost: newItem.giftcost,
+        friendId: newItem.friendId,
         isCompleted: newItem.isCompleted
       })
       )
@@ -60,7 +44,7 @@ var postNewItem = function(newItem){ //this will put the info in to the FB datab
 
 var deleteItem = function (itemId){
   return $q((resolve, reject)=> {
-    $http.delete(`${FIREBASE_CONFIG.databaseURL}/items/${itemId}.json`)
+    $http.delete(`${FIREBASE_CONFIG.databaseURL}/gifts/${itemId}.json`)
     .success(function(deleteResponse){
       resolve(deleteResponse);
     })
@@ -73,7 +57,7 @@ var deleteItem = function (itemId){
 
 var getSingleItem = function (itemId){
   return $q((resolve, reject)=> {
-    $http.get(`${FIREBASE_CONFIG.databaseURL}/items/${itemId}.json`)
+    $http.get(`${FIREBASE_CONFIG.databaseURL}/gifts/${itemId}.json`)
     .success(function(getSingleResponse){
       resolve(getSingleResponse);
     })
@@ -89,12 +73,12 @@ var getSingleItem = function (itemId){
 var editItem = function(editItem){
   console.log("factory edit", editItem);
   return $q((resolve,reject)=>{
-    $http.put(`${FIREBASE_CONFIG.databaseURL}/items/${editItem.id}.json`,
+    $http.put(`${FIREBASE_CONFIG.databaseURL}/gifts/${editItem.id}.json`,
       JSON.stringify({
-        assignedTo: editItem.assignedTo,
-        isCompleted: editItem.isCompleted,
-        gift: editItem.gift,
-        uid: editItem.uid
+        giftdescription: editItem.giftdescription,
+        giftcost: editItem.giftcost,
+        friendId: editItem.friendId,
+        isCompleted: editItem.isCompleted
       })
       )
       .success(function(editResponse){
@@ -106,5 +90,5 @@ var editItem = function(editItem){
   });
 };
 
-  return{getItemList:getItemList, postNewItem:postNewItem, deleteItem:deleteItem, getSingleItem:getSingleItem, editItem:editItem, getListGifts:getListGifts};
+  return{getItemList:getItemList, postNewItem:postNewItem, deleteItem:deleteItem, getSingleItem:getSingleItem, editItem:editItem};
 });

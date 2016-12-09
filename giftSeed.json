@@ -13,47 +13,45 @@
             "uid": "5HM94xZhzYWWlPRpAmvnljROOMK2"
         }
     },
-    "items": {
-        "item0": {
-            "assignedTo": "Tommy Waters",
-            "cost": "250",
+    "friends": {
+        "friend0": {
+            "name": "Tommy Waters",
             "isCompleted": false,
             "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
         },
 
-         "item1": {
-            "assignedTo": "Mom",
-            "cost": "50",
+         "friend1": {
+            "name": "Mom",
             "isCompleted": false,
             "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
         },
-         "item2": {
-            "assignedTo": "Miller",
-            "cost": "10",
+         "friend2": {
+            "name": "Miller",
             "isCompleted": false,
             "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
         }
     },
-    "listgifts": {
+    "gifts": {
         "gift0": {
-            "assignedTo": "Tommy Waters",
-            "usergift": "Diamond Ring",
-            "usercost": "250",
-            "isCompleted": false,
-            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+            "giftdescription": "Diamond Ring",
+            "giftcost": "250",
+            "friendId": "friend0",
+            "isCompleted": false
         },
 
          "gift1": {
-            "usergift": "Necklace",
-            "usercost": "50",
-            "isCompleted": true,
-            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+            "giftdescription": "Necklace",
+            "giftcost": "50",
+            "friendId": "friend1",
+            "isCompleted": true
+
         },
          "gift2": {
-            "usergift": "Toy Truck",
-            "usercost": "10",
-            "isCompleted": false,
-            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+            "giftdescription": "Toy Truck",
+            "giftcost": "10",
+            "friendId": "friend2",
+            "isCompleted": false
+
         }
     }
 

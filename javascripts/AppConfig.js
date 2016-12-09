@@ -63,7 +63,7 @@ app.config(function($routeProvider){
       controller: 'GiftNewCtrl', // see new controller file
       resolve: {isAuth}
     })
-    .when('/wishlist:id', {
+    .when('/wishlist/:id', {
       templateUrl: '/partials/userwishlist.html', //see partials folder
       controller: 'UserWishListCtrl', // see new controller file
       resolve: {isAuth}

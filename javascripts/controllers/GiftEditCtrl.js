@@ -1,15 +1,15 @@
 "use strict";
 
-app.controller("GiftEditCtrl", function($scope, $location, $routeParams, GiftFactory){
+app.controller("GiftEditCtrl", function($scope, $location, $routeParams, FriendFactory){
    $scope.newGift = {}; //!!calling below!!
    let itemId = $routeParams.id;
 
-  GiftFactory.getSingleItem(itemId).then(function(itemToEdit){
+  FriendFactory.getSingleItem(itemId).then(function(itemToEdit){
     // **ADD LOGIC HERE**
 
   });
   $scope.addNewItem = function(){  //even though this is edit, you MUST use addnewItem()
-    GiftFactory.editItem($scope.newTask).then(function(response){
+    FriendFactory.editItem($scope.newTask).then(function(response){
       $scope.newGift = {};
       $location.url("/gift-edit");
 
