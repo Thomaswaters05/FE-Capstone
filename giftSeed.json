@@ -17,18 +17,27 @@
         "friend0": {
             "name": "Tommy Waters",
             "isCompleted": false,
-            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+            "uid": "1",
+            "hostgiver": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
         },
 
          "friend1": {
             "name": "Mom",
             "isCompleted": false,
-            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+            "uid": "2",
+            "hostgiver": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
         },
          "friend2": {
             "name": "Miller",
             "isCompleted": false,
-            "uid": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+            "uid": "3",
+            "hostgiver": "qgBqzZw2NHQqJuz4vDip5sFHzu43"
+        },
+        "friend3": {
+            "name": "Bill",
+            "isCompleted": false,
+            "uid": "3",
+            "hostgiver": "someoneelse"
         }
     },
     "gifts": {

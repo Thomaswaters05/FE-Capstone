@@ -1,43 +1,25 @@
-<h1>{{}} Wish List</h1>
-
-<!-- table class=" table table hover">
-  <tr>
-    <th>Item</th>
-    <th>Cost</th>
-  </tr>
-
-</div>
-
-<div>
-  <tr ng-repeat="item in items | filter: searchText"">
-    <div>
-      <td>{{item.gift}}</td>
-      <td>{{item.cost}}</td>
-    </div>
-</div>
- -->
  <a href="#/gift-add"><button>Add Gift</button></a>
 
 <!-- *******CURRENT LIST LOGIC********* -->
-
-<div ng-repeat="friend in friends">
-<h1>{{friend.name}} Wish List</h1>
-
+<h3>Wish List</h3>
+<div ng-repeat="gift in gifts">
       <div class="panel-body">
-         <div class="col-xs-3"><input type="checkbox" ng-model="friend.isCompleted" ng-change="inputChange(friend)"></div>
-         <div class="col-xs-3">{{friend.name}}</div>
-         <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
+         <div class="col-xs-3"><input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)"></div>
+         <div class="col-xs-3">{{gift.giftdescription}}</div>
+         <div class="col-xs-2"><button ng-click="deleteFriend(gift.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div>
 <!-- *******CURRENT LIST LOGIC********* -->
 
+
+
 <!-- *******PURCHASED LIST LOGIC********* -->
-<h3>Purchased</h3>
-<div ng-repeat="friend in friends">
+<!-- <h3>Purchased</h3>
+<div ng-repeat="gift in gifts">
 
       <div class="panel-body">
-         <div class="col-xs-5"><input type="checkbox" ng-model="friend.isCompleted" ng-change="inputChange(friend)"></div>
-         <div class="col-xs-5">{{friend.name}}</div>
-         <div class="col-xs-2"><button ng-click="deleteItem(friend.id)" class="fa fa-minus-circle"></button></div>
+         <div class="col-xs-5"><input type="checkbox" ng-model="gift.isCompleted" ng-change="inputChange(gift)"></div>
+         <div class="col-xs-5">{{gift.giftdescription}}</div>
+         <div class="col-xs-2"><button ng-click="deleteGift(giftdescription.id)" class="fa fa-minus-circle"></button></div>
    </div>
-</div>
+</div> -->

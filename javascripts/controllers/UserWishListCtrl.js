@@ -1,47 +1,24 @@
 "use strict";
 
 app.controller("UserWishListCtrl", function($scope, $rootScope, $location, $routeParams, WishListFactory){
-   $scope.newGift = {}; //!!calling below!!
-   let itemId = $routeParams.id;
-   console.log("what is this", itemId);
-
-  WishListFactory.getSingleItem(itemId).then(function(wishList){
-    wishList.id = itemId;
-    $scope.newGift = wishList;
-    console.log("wishlist data", wishList);
-  });
-
-  $scope.addNewGift = function(){
-    WishListFactory.editItem($scope.newGift).then(function(response){
-      $scope.newGift = {};
-      $location.url("/gift-list");
-
-    });
-  };
-
+   let friendId = $routeParams.id;
+   console.log("what is this", friendId);
+   $scope.newGift = []; //!!calling below!!
 
 // ***FUNCTIONALITY FOR ALL LISTS BELOW (ADD, DELETE, EDIT)***
 
- let getItems = function(){
-    WishListFactory.getItemList($rootScope.user.uid).then(function(items){
-      $scope.items = items;
+ let getGifts = function(){
+    WishListFactory.getGifts(friendId).then(function(result){
+      $scope.gifts = result;
     });
   };
-  getItems();
-
- let getListGifts = function(){
-    WishListFactory.getItemList($rootScope.user.uid).then(function(listgifts){
-      $scope.listgifts = listgifts;
-    });
-  };
-  getListGifts();
+  getGifts();
 
 
-
-  $scope.deleteItem = function(itemId){
+  $scope.deleteGift = function(friendId){
     console.log('you deleted this');
-    WishListFactory.deleteItem(itemId).then(function(response){
-      getItems();
+    WishListFactory.deleteFriend(friendId).then(function(response){
+      getGifts();
     });
   };
 
@@ -53,6 +30,21 @@ $scope.inputChange = function(thing1){//this function will change the checkbox t
     });
   };
 
+// *****NOT SURE IF I NEED THIS? THIS WAS ABOVE ALL OF THIS*****
+  // WishListFactory.getSingleGift(friendId).then(function(wishList){
+  //   wishList.id = friendId;
+  //   $scope.newGift = wishList;
+  //   console.log("wishlist data", wishList);
+  // });
+
+  // $scope.addNewFriend = function(){
+  //   WishListFactory.editItem($scope.newGift).then(function(response){
+  //     $scope.newGift = {};
+  //     $location.url("/wishlist/:id");
+
+  //   });
+  // };
+// *****NOT SURE IF I NEED THIS? THIS WAS ABOVE ALL OF THIS*****
 
 
 });

@@ -45,22 +45,22 @@ app.config(function($routeProvider){
     })
      .when('/gift-main', {
       templateUrl: '/partials/mainscreen.html', //see partials folder
-      controller: 'GiftListCtrl', // see new controller file
+      controller: 'FriendListCtrl', // see new controller file
       resolve: {isAuth}
     })
-    .when('/gift-list', {
-      templateUrl: '/partials/giftList.html', //see partials folder
-      controller: 'GiftListCtrl', // see new controller file
+    .when('/friend-list', {
+      templateUrl: '/partials/friendList.html', //see partials folder
+      controller: 'FriendListCtrl', // see new controller file
       resolve: {isAuth}
     })
-    .when('/gift-new', {
-      templateUrl: '/partials/giftnew.html', //see partials folder
-      controller: 'GiftNewCtrl', // see new controller file
+    .when('/friend-new', {
+      templateUrl: '/partials/newfriend.html', //see partials folder
+      controller: 'AddFriendCtrl', // see new controller file
       resolve: {isAuth}
     })
     .when('/gift-add', {
       templateUrl: '/partials/addgift.html', //see partials folder
-      controller: 'GiftNewCtrl', // see new controller file
+      controller: 'AddFriendCtrl', // see new controller file
       resolve: {isAuth}
     })
     .when('/wishlist/:id', {

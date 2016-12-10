@@ -12,16 +12,16 @@
 </div> -->
 <!-- *******SEARCHES FOR CURRENT LISTS OR COMPLETED LISTS ********* -->
 
-<div ng-controller="GiftListCtrl">
+
 <!-- *******CURRENT LIST LOGIC********* -->
 <h3>Current Lists</h3>
-<div ng-repeat="friend in friends">
+<div ng-repeat="friend in friends | filter:{isCompleted:false} | filter: searchText">
 
       <div class="panel-body">
-         <div class="col-xs-3"><input type="checkbox" ng-model="friend.isCompleted" ng-change="inputChange(friend)"></div>
+         <div class="col-xs-1"><input type="checkbox" ng-model="friend.isCompleted" ng-change="inputChange(friend)"></div>
          <div class="col-xs-3"><a href="#/wishlist/{{friend.id}}"><button>{{friend.name}}</button></a></div>
-         <div class="col-xs-3">COST</div>
-         <div class="col-xs-2"><button ng-click="deleteItem(friend.id)" class="fa fa-minus-circle"></button></div>
+         <div class="col-xs-3">$25</div>
+         <div class="col-xs-2"><button ng-click="deleteFriend(friend.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div>
 <!-- *******CURRENT LIST LOGIC********* -->
@@ -29,13 +29,13 @@
 
 <!-- *******PURCHASED LIST LOGIC********* -->
 <h3>Purchased</h3>
-<div ng-repeat="friend in friends">
+<div ng-repeat="friend in friends | filter:{isCompleted:true}">
 
       <div class="panel-body">
-         <div class="col-xs-5"><input type="checkbox" ng-model="friend.isCompleted" ng-change="inputChange(friend)"></div>
-         <div class="col-xs-5">{{friend.name}}</div>
-          <div class="col-xs-3">COST</div>
-         <div class="col-xs-2"><button ng-click="deleteItem(friend.id)" class="fa fa-minus-circle"></button></div>
+         <div class="col-xs-1"><input type="checkbox" ng-model="friend.isCompleted" ng-change="inputChange(friend)"></div>
+         <div class="col-xs-3"><a href="#/wishlist/{{friend.id}}"><button>{{friend.name}}</button></a></div>
+         <div class="col-xs-3">$25</div>
+         <div class="col-xs-2"><button ng-click="deleteFriend(friend.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div>
 <!-- *******PURCHASED LIST LOGIC********* -->
@@ -45,7 +45,7 @@
 <h6>BUDGET GOES HERE::</h6>
 
 
-</div>
+
 
 <!-- *******BUDGET LOGIC- TOTAL OF AMOUNT NEEDED FOR GIFTS********* -->
 
