@@ -1,6 +1,13 @@
 body {
   background-image: url(/img/brushed_alu_dark.png);
+  font-family: "Mountains of Christmas";
+    font-size: 30px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
 }
+
 
 h1 {
     color: blue;
@@ -8,7 +15,7 @@ h1 {
   }
 
 h3{
-  color: black;
+  color: #00695c;
   text-align: center;
 }
 
@@ -25,14 +32,33 @@ h3{
   margin: 80px;
 }
 
+
+textarea:focus, input:focus {
+    color: #00695c;
+}
+
+table{
+    color: #00695c;
+    font-size: 30px;
+}
+
+
+label.active{
+    color: white;
+    font-size: 25px;
+}
+
+#cardz{
+    text-align: center;
+}
+
+
+
 // Styling for the header and Navigation
 a[ng-click]{
     cursor: pointer;
 
 }
-
-
-
 
 
 // *****NAVBAR*****

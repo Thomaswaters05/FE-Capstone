@@ -8,6 +8,7 @@ app.controller("AddFriendCtrl", function($scope, $rootScope, $location, FriendFa
     $scope.newFriend.hostgiver = $rootScope.user.uid;
     FriendFactory.postFriend($scope.newFriend).then(function(friendId){
       $location.url("/friend-list");
+      Materialize.toast('New List Added Successfully!!', 4000, 'green rounded')
       $scope.newFriend = {};
     });
 

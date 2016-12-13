@@ -1,11 +1,17 @@
 body {
-  background-image: url(/img/brushed_alu_dark.png); }
+  background-image: url(/img/brushed_alu_dark.png);
+  font-family: "Mountains of Christmas";
+  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px; }
 
 h1 {
   color: blue; }
 
 h3 {
-  color: black;
+  color: #00695c;
   text-align: center; }
 
 #mainz {
@@ -16,6 +22,21 @@ h3 {
 
 .buttonMargin {
   margin: 80px; }
+
+textarea:focus, input:focus {
+  color: #00695c; }
+
+table {
+  color: #00695c;
+  font-size: 30px; }
+
+label.active {
+  color: white;
+  font-size: 25px; }
+
+.input-field input[type=text] {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 white; }
 
 a[ng-click] {
   cursor: pointer; }

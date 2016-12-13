@@ -3,7 +3,6 @@
 "use strict";
 
 app.factory("WishListFactory", function($q, $http, FIREBASE_CONFIG){
-
   var getGifts = function(uid){
     return $q((resolve, reject)=>{
       $http.get(`${FIREBASE_CONFIG.databaseURL}/gifts.json?orderBy="friendId"&equalTo="${uid}"`)
