@@ -9,15 +9,16 @@ app.controller("UserWishListCtrl", function($scope, $rootScope, $location, $rout
 
  let getGifts = function(){
     WishListFactory.getGifts(friendId).then(function(result){
+      console.log("r1",result)
       $scope.gifts = result;
     });
   };
   getGifts();
 
 
-  $scope.deleteGift = function(friendId){
+  $scope.deleteGift = function(giftId){
     console.log('you deleted this');
-    WishListFactory.deleteFriend(friendId).then(function(response){
+    WishListFactory.deleteGift(giftId).then(function(response){
       getGifts();
     });
   };
@@ -29,6 +30,12 @@ $scope.inputChange = function(thing1){//this function will change the checkbox t
 
     });
   };
+
+  $scope.addGiftGo = function(){
+    $location.path(`/gift-add/${$routeParams.id}`)
+  }
+
+
 
 // *****NOT SURE IF I NEED THIS? THIS WAS ABOVE ALL OF THIS*****
   // WishListFactory.getSingleGift(friendId).then(function(wishList){

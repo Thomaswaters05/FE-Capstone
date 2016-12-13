@@ -8,14 +8,12 @@ app.factory("WishListFactory", function($q, $http, FIREBASE_CONFIG){
     return $q((resolve, reject)=>{
       $http.get(`${FIREBASE_CONFIG.databaseURL}/gifts.json?orderBy="friendId"&equalTo="${uid}"`)
       .success(function(response){
-        console.log('getsuccess1')
         let gifts = [];
         Object.keys(response).forEach(function(key){
           response[key].id = key;
           gifts.push(response[key]);
         });
         resolve(gifts);
-        console.log("g1",gifts)
       })
       .error(function(errorResponse){
         reject(errorResponse);
@@ -43,9 +41,9 @@ var postGifts = function(newGift){ //this will put the info in to the FB databas
   });
 };
 
-var deleteGifts = function (friendId){
+var deleteGift = function (giftId){
   return $q((resolve, reject)=> {
-    $http.delete(`${FIREBASE_CONFIG.databaseURL}/gifts/${friendId}.json`)
+    $http.delete(`${FIREBASE_CONFIG.databaseURL}/gifts/${giftId}.json`)
     .success(function(deleteResponse){
       resolve(deleteResponse);
     })
@@ -56,9 +54,9 @@ var deleteGifts = function (friendId){
 
 };
 
-var getSingleGift = function (friendId){
+var getSingleGift = function (giftId){
   return $q((resolve, reject)=> {
-    $http.get(`${FIREBASE_CONFIG.databaseURL}/gifts/${friendId}.json`)
+    $http.get(`${FIREBASE_CONFIG.databaseURL}/gifts/${giftId}.json`)
     .success(function(getSingleResponse){
       resolve(getSingleResponse);
     })
@@ -91,5 +89,5 @@ var editGifts = function(editGift){
   });
 };
 
-  return{getGifts:getGifts, postGifts:postGifts, deleteGifts:deleteGifts, getSingleGift:getSingleGift, editGifts:editGifts};
+  return{getGifts:getGifts, postGifts:postGifts, deleteGift:deleteGift, getSingleGift:getSingleGift, editGifts:editGifts};
 });

@@ -58,14 +58,14 @@ app.config(function($routeProvider){
       controller: 'AddFriendCtrl', // see new controller file
       resolve: {isAuth}
     })
-    .when('/gift-add', {
-      templateUrl: '/partials/addgift.html', //see partials folder
-      controller: 'AddFriendCtrl', // see new controller file
-      resolve: {isAuth}
-    })
-    .when('/wishlist/:id', {
+     .when('/wishlist/:id', {
       templateUrl: '/partials/userwishlist.html', //see partials folder
       controller: 'UserWishListCtrl', // see new controller file
+      resolve: {isAuth}
+    })
+    .when('/gift-add/:id', {
+      templateUrl: '/partials/addgift.html', //see partials folder
+      controller: 'AddGiftCtrl', // see new controller file
       resolve: {isAuth}
     })
     .otherwise('/auth');

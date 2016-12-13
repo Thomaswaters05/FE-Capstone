@@ -1,14 +1,21 @@
- <a href="#/gift-add"><button>Add Gift</button></a>
+ <button ng-click="addGiftGo()">Add Gift</button>
 
 <!-- *******CURRENT LIST LOGIC********* -->
 <h3>Wish List</h3>
-<div ng-repeat="gift in gifts">
+
+<!-- <div ng-repeat="gift in gifts">
+
+<h1>Gift</h1>
       <div class="panel-body">
          <div class="col-xs-3"><input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)"></div>
          <div class="col-xs-3">{{gift.giftdescription}}</div>
-         <div class="col-xs-2"><button ng-click="deleteFriend(gift.id)" class="fa fa-minus-circle"></button></div>
-   </div>
-</div>
+          <div class="col-xs-3">{{gift.giftcost}}</div>
+         <div class="col-xs-2"><button ng-click="deleteGift(gift.id)" class="fa fa-minus-circle"></button></div>
+   </div> -->
+
+
+
+
 <!-- *******CURRENT LIST LOGIC********* -->
 
 
@@ -23,3 +30,47 @@
          <div class="col-xs-2"><button ng-click="deleteGift(giftdescription.id)" class="fa fa-minus-circle"></button></div>
    </div>
 </div> -->
+
+<table class="highlight centered">
+   <thead>
+       <tr>
+         <th data-field="name">Item Name</th>
+         <th data-field="price">Item Price</th>
+       </tr>
+   </thead>
+
+   <tbody>
+       <tr ng-repeat="gift in gifts | filter:{isCompleted:false}"  class="highlight">
+         <input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)">
+         <td><i class="fa fa-tree"> {{gift.giftdescription}} </i></td>
+         <td>$ {{gift.giftcost}}</td>
+         <td><button ng-click="deleteGift(gift.id)" class="fa fa-minus-circle"></button> </td>
+       </tr>
+   </tbody>
+</table>
+
+<!-- *****COMPLETED**** -->
+<h3>Purchased!</h3>
+<table class="highlight centered">
+   <thead>
+      <tr>
+         <th data-field="name">Completed Gift Purchases</th>
+      </tr>
+   </thead>
+   <tbody>
+         <tr ng-repeat="gift in gifts| filter:{isCompleted:true}">
+            <input type="checkbox" id="test5"  ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)">
+
+            <td><i class="fa fa-tree"> {{gift.giftdescription}} </i></td>
+            <td><button ng-click="deleteGift(gift.id)" class="fa fa-minus-circle"></button></td>
+         </tr>
+   </tbody>
+
+</table>
+
+
+
+
+<!-- *****COMPLETED**** -->
+
+

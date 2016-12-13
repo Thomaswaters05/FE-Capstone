@@ -28,7 +28,7 @@
 
 
 <!-- *******PURCHASED LIST LOGIC********* -->
-<h3>Purchased</h3>
+<!-- <h3>Purchased</h3>
 <div ng-repeat="friend in friends | filter:{isCompleted:true}">
 
       <div class="panel-body">
@@ -37,12 +37,15 @@
          <div class="col-xs-3">$25</div>
          <div class="col-xs-2"><button ng-click="deleteFriend(friend.id)" class="fa fa-minus-circle"></button></div>
    </div>
-</div>
+</div> -->
 <!-- *******PURCHASED LIST LOGIC********* -->
 
 <!-- *******BUDGET LOGIC- TOTAL OF AMOUNT NEEDED FOR GIFTS********* -->
 
 <h6>BUDGET GOES HERE::</h6>
+    <td  ng-repeat="friend in friends">
+        {{friends.giftcost}}
+    </td>
 
 
 
