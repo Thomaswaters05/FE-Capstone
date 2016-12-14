@@ -5,25 +5,6 @@ app.controller("UserWishListCtrl", function($scope, $rootScope, $location, $rout
    console.log("what is this", friendId);
    $scope.newGift = []; //!!calling below!!
 
-
-// ***FUNCTIONALITY FOR ALL LISTS BELOW (ADD, DELETE, EDIT)***
-
-  // Calculate Total Amount
-//   $scope.getTotal = function(user){
-//     var total = 0;
-//     for(var i = 0; i < $scope.giftcost.length; i++){
-//           console.log("works?",$scope.gifts.giftcost.length)
-//         // var post = $scope.giftcost[i];
-//         // if (post.name === user) {
-//         //   total += post.amount;
-//         }
-//     }
-//     return Math.round(total * 100) / 100;
-// }
-
-
-
-
  let getGifts = function(){
     WishListFactory.getGifts(friendId).then(function(result){
       console.log("r1",result)

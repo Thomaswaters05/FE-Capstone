@@ -3,7 +3,7 @@
 app.controller("FriendListCtrl", function($scope, $rootScope, $location, FriendFactory, WishListFactory){
   $scope.welcome = "hello";     // this is like a console log AKA it tests it
   $scope.friends = [];    //we put this info (data for people/to do friends/etc) in FB database
-
+  $scope.total = 0;
 
   let getFriends = function(){
     console.log($rootScope.user.uid);
@@ -14,15 +14,21 @@ app.controller("FriendListCtrl", function($scope, $rootScope, $location, FriendF
             WishListFactory.getGifts(friend.id).then(function(gifts){
             friend.sumOfGifts = gifts
                                 .map(function(gift){ return gift.giftcost; })
-                                .reduce(function(a, b){ return parseInt(a) + parseInt(b); });
+                                .reduce(function(a, b){ return parseInt(a) + parseInt(b) });
+            $scope.total += parseInt(friend.sumOfGifts);
           });
         })(friends[i]);
-      }
+      };
+
 
       $scope.friends = friends;
+
     });
+
+
   };
   getFriends();
+
 
 
   $scope.deleteFriend = function(friendId){

@@ -2,24 +2,6 @@
 
 app.factory("FriendFactory", function($q, $http, FIREBASE_CONFIG){
 
- // var getGifts = function(uid){
- //    return $q((resolve, reject)=>{
- //      $http.get(`${FIREBASE_CONFIG.databaseURL}/gifts.json?orderBy="friendId"&equalTo="${uid}"`)
- //      .success(function(response){
- //        let gifts = [];
- //        Object.keys(response).forEach(function(key){
- //          response[key].id = key;
- //          gifts.push(response[key]);
- //        });
- //        resolve(gifts);
- //      })
- //      .error(function(errorResponse){
- //        reject(errorResponse);
- //      });
- //    });
- //  };
-
-
   var getFriend = function(uid){
     return $q((resolve, reject)=>{
       $http.get(`${FIREBASE_CONFIG.databaseURL}/friends.json?orderBy="hostgiver"&equalTo="${uid}"`)  //items.json corresponds to the FB DATABASE ITSELF

@@ -1,5 +1,4 @@
 <!-- *******SEARCHES FOR CURRENT LISTS OR COMPLETED LISTS ********* -->
-
 <!-- <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
         <div class="input-group">
@@ -13,18 +12,8 @@
 <!-- *******SEARCHES FOR CURRENT LISTS OR COMPLETED LISTS ********* -->
 
 
+
 <!-- *******CURRENT LIST LOGIC********* -->
-<!-- <h3>Current Lists</h3>
-<div ng-repeat="friend in friends | filter:{isCompleted:false} | filter: searchText">
-
-      <div class="panel-body">
-         <div class="col-xs-1"><input type="checkbox" ng-model="friend.isCompleted" ng-change="inputChange(friend)"></div>
-         <div class="col-xs-3"><a href="#/wishlist/{{friend.id}}"><button>{{friend.name}}</button></a></div>
-         <div class="col-xs-3">$25</div>
-         <div class="col-xs-2"><button ng-click="deleteFriend(friend.id)" class="fa fa-minus-circle"></button></div>
-   </div>
-</div> -->
-
 <h3>Current Lists</h3>
 <table class="centered">
    <thead>
@@ -35,7 +24,7 @@
    </thead>
 
    <tbody>
-       <tr ng-repeat="friend in friends | filter:{isCompleted:false}" class="highlight">
+       <tr ng-repeat="friend in friends | filter:{isCompleted:false}| filter: searchText" class="highlight">
          <input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)">
          <td><a class="waves-effect waves-light btn" href="#/wishlist/{{friend.id}}"><i class="fa fa-tree"></i> {{friend.name}}</a></td>
          <td>$ {{friend.sumOfGifts}}</td>
@@ -44,8 +33,13 @@
    </tbody>
 </table>
 
+<div ng-model="total">
+  <p>{{total}}</p>
+</div>
 <!-- *******CURRENT LIST LOGIC********* -->
 
+<!--
+{{ users | map: 'amount' | sum }} -->
 
 <!-- *******PURCHASED LIST LOGIC********* -->
 <!-- <h3>Purchased</h3>
@@ -64,10 +58,7 @@
 
 <!-- *******BUDGET LOGIC- TOTAL OF AMOUNT NEEDED FOR GIFTS********* -->
 
-<h6>BUDGET GOES HERE::</h6>
-    <div ng-repeat="friend in friends">
 
-    </div>
 
 
 
