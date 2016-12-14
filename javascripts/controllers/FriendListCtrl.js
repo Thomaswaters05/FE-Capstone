@@ -5,21 +5,20 @@ app.controller("FriendListCtrl", function($scope, $rootScope, $location, FriendF
   $scope.friends = [];    //we put this info (data for people/to do friends/etc) in FB database
 
 
-
-// ***THIS WAS JUST ADDED/DELTE IF NOT NEEDED****
-// let getGifts = function(){
-//     WishListFactory.getGifts(friendId).then(function(result){
-//       console.log("r27",result)
-//       $scope.gifts = result;
-//     });
-//   };
-//   getGifts();
-
-
   let getFriends = function(){
     console.log($rootScope.user.uid);
     FriendFactory.getFriend($rootScope.user.uid).then(function(friends){
       console.log('friends',friends);
+      for (var i = 0; i < friends.length; i++) {
+        (function(friend) {
+            WishListFactory.getGifts(friend.id).then(function(gifts){
+            friend.sumOfGifts = gifts
+                                .map(function(gift){ return gift.giftcost; })
+                                .reduce(function(a, b){ return parseInt(a) + parseInt(b); });
+          });
+        })(friends[i]);
+      }
+
       $scope.friends = friends;
     });
   };

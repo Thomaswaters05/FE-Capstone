@@ -52,7 +52,7 @@
             "giftdescription": "Necklace",
             "giftcost": "50",
             "friendId": "friend1",
-            "isCompleted": true
+            "isCompleted": false
 
         },
          "gift2": {

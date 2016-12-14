@@ -2,8 +2,6 @@
 
 app.factory("FriendFactory", function($q, $http, FIREBASE_CONFIG){
 
-
-// ****THIS WAS JUST ADDED/DELETE IF NOT NEEDED***
  // var getGifts = function(uid){
  //    return $q((resolve, reject)=>{
  //      $http.get(`${FIREBASE_CONFIG.databaseURL}/gifts.json?orderBy="friendId"&equalTo="${uid}"`)

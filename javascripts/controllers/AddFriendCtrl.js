@@ -2,6 +2,7 @@
 
 app.controller("AddFriendCtrl", function($scope, $rootScope, $location, FriendFactory, WishListFactory){
   $scope.newFriend = {};
+  $scope.newGift = [];
 
   $scope.addNewFriend = function(){
     $scope.newFriend.isCompleted = false; //you must define new task above (basically as a variable/empty obj) and set to false

@@ -38,7 +38,7 @@
        <tr ng-repeat="friend in friends | filter:{isCompleted:false}" class="highlight">
          <input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)">
          <td><a class="waves-effect waves-light btn" href="#/wishlist/{{friend.id}}"><i class="fa fa-tree"></i> {{friend.name}}</a></td>
-         <td>$ 25</td>
+         <td>$ {{friend.sumOfGifts}}</td>
          <td><button ng-click="deleteFriend(friend.id)" class="fa fa-minus-circle"></button> </td>
        </tr>
    </tbody>
@@ -60,11 +60,13 @@
 </div> -->
 <!-- *******PURCHASED LIST LOGIC********* -->
 
+
+
 <!-- *******BUDGET LOGIC- TOTAL OF AMOUNT NEEDED FOR GIFTS********* -->
 
 <h6>BUDGET GOES HERE::</h6>
-    <div ng-repeat="gift in gifts">
-        {{gift.giftcost}}
+    <div ng-repeat="friend in friends">
+
     </div>
 
 
