@@ -1,10 +1,19 @@
   <h3>Add New Gift!</h3>
 
-    <div>
 
-         <input type="text" class="form-control" placeholder="Gift Description.." ng-model="newGift.usergift"> <!-- ngmodel binds what is within ng model to your DOM -->
-         <input type="text" class="form-control" placeholder="Gift Cost.." ng-model="newGift.usercost"> <!-- ngmodel binds what is within ng model to your DOM -->
-    </div>
+ <div id="cardz" class="row">
+        <div class="col s12 ">
+          <div class="card  teal">
+            <div class="card-content white-text">
+              <span class="card-title">Enter Description</span>
+              <i class="fa fa-hand-peace-o"></i><input id="changeMe" type="text" class=".input-field" placeholder="Gift Description.." ng-model="newGift.giftdescription"><!-- ngmodel binds what is within ng model to your DOM -->
+              <span class="card-title">Enter Cost</span>
+               <i class="fa fa-money"></i> <input type="text" class=".input-field" placeholder="Gift Cost.." ng-model="newGift.giftcost">
+            </div>
+            <div class="card-action">
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <button type="button" class="btn btn-primary btn-lg col-xs-2 " ng-click="addGifts()">New List</button>
-</div>
+        <button type="button" class="btn btn-primary btn-lg col-xs-2 " ng-click="addNewGift()"> New Gift</button>

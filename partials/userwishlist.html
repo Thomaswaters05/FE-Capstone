@@ -1,44 +1,60 @@
-<h1>{{Users}} Wish List</h1>
-
-<!-- table class=" table table hover">
-  <tr>
-    <th>Item</th>
-    <th>Cost</th>
-  </tr>
-
-</div>
-
-<div>
-  <tr ng-repeat="item in items | filter: searchText"">
-    <div>
-      <td>{{item.gift}}</td>
-      <td>{{item.cost}}</td>
-    </div>
-</div>
- -->
- <a href="#/gift-add"><button>Add Gift</button></a>
+ <a class="waves-effect waves-light btn" ng-click="addGiftGo()">Add Gift</a>
 
 <!-- *******CURRENT LIST LOGIC********* -->
+<h3>Wish List</h3>
 
-<div ng-repeat="gift in listgifts">
 
+<!-- <div ng-repeat="gift in gifts">
+
+<h1>Gift</h1>
       <div class="panel-body">
-         <div class="col-xs-3"><input type="checkbox" ng-model="gift.isCompleted" ng-change="inputChange(gift)"></div>
-         <div class="col-xs-3">{{gift.usergift}}</div>
-         <div class="col-xs-3">{{gift.usercost}}</div>
-         <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
+         <div class="col-xs-3"><input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)"></div>
+         <div class="col-xs-3">{{gift.giftdescription}}</div>
+          <div class="col-xs-3">{{gift.giftcost}}</div>
+         <div class="col-xs-2"><button ng-click="deleteGift(gift.id)" class="fa fa-minus-circle"></button></div>
    </div>
-</div>
-<!-- *******CURRENT LIST LOGIC********* -->
 
-<!-- *******PURCHASED LIST LOGIC********* -->
-<h3>Purchased</h3>
-<div ng-repeat="item in listgifts">
+<!*******CURRENT LIST LOGIC********* -->
+<table class="highlight centered">
+   <thead>
+       <tr>
+         <th data-field="name">Item Name</th>
+         <th data-field="price">Item Price</th>
+       </tr>
+   </thead>
 
-      <div class="panel-body">
-         <div class="col-xs-5"><input type="checkbox" ng-model="item.isCompleted" ng-change="inputChange(item)"></div>
-         <div class="col-xs-5">{{item.usergift}}</div>
-         <div class="col-xs-5">{{item.usercost}}</div>
-         <div class="col-xs-2"><button ng-click="deleteItem(item.id)" class="fa fa-minus-circle"></button></div>
-   </div>
-</div>
+   <tbody>
+       <tr ng-repeat="gift in gifts | filter:{isCompleted:false}"  class="highlight">
+         <input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)">
+         <td><i class="fa fa-tree"></i>{{gift.giftdescription}}</td>
+         <td>$ {{gift.giftcost}}</td>
+         <td><button ng-click="deleteGift(gift.id)" class="fa fa-minus-circle"></button> </td>
+       </tr>
+   </tbody>
+</table>
+
+<!-- *****COMPLETED**** -->
+<!-- <h3>Purchased!</h3>
+<table class="highlight centered">
+   <thead>
+      <tr>
+         <th data-field="name">Completed Gift Purchases</th>
+      </tr>
+   </thead>
+   <tbody>
+         <tr ng-repeat="gift in gifts| filter:{isCompleted:true}">
+            <input type="checkbox" id="test5"  ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)">
+
+            <td><i class="fa fa-tree"> {{gift.giftdescription}} </i></td>
+            <td><button ng-click="deleteGift(gift.id)" class="fa fa-minus-circle"></button></td>
+         </tr>
+   </tbody>
+
+</table> -->
+
+<!-- *****COMPLETED**** -->
+
+<h4>Budget ${{getTotal() }}</h4>
+
+
+

@@ -8,11 +8,11 @@ app.controller("NavCtrl", function($scope){
   },
     {
       name:"All Gifts",
-      url:"#/gift-list "
+      url:"#/friend-list "
   },
     {
       name:"New Gifts",
-      url:"#/gift-new"
+      url:"#/friend-new"
   }
   ];    // this is making an array and calling it navitems - THESE ITEMS NEED TO MATCH AS THEY DO IN HTML (NAV)
 });

@@ -1,11 +1,17 @@
 body {
-  background-image: url(/img/brushed_alu_dark.png); }
+  background-image: url(/img/brushed_alu_dark.png);
+  font-family: "Mountains of Christmas";
+  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px; }
 
 h1 {
-  color: red; }
+  color: blue; }
 
 h3 {
-  color: green;
+  color: #00695c;
   text-align: center; }
 
 #mainz {
@@ -14,125 +20,26 @@ h3 {
   #mainz li {
     margin: 50px; }
 
-a[ng-click] {
-  cursor: pointer; }
-
 .buttonMargin {
   margin: 80px; }
 
-.navbar-custom {
-  background-color: #2b854f;
-  border-color: #236c40;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#37ac66), to(#2b854f));
-  background-image: -webkit-linear-gradient(top, #37ac66, 0%, #2b854f, 100%);
-  background-image: -moz-linear-gradient(top, #37ac66 0%, #2b854f 100%);
-  background-image: linear-gradient(to bottom, #37ac66 0%, #2b854f 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff37ac66', endColorstr='#ff2b854f', GradientType=0); }
+textarea:focus, input:focus {
+  color: #00695c; }
 
-.navbar-custom .navbar-brand {
-  color: #ffffff; }
+table {
+  color: #00695c;
+  font-size: 30px; }
 
-.navbar-custom .navbar-brand:hover,
-.navbar-custom .navbar-brand:focus {
-  color: #e6e6e6;
-  background-color: transparent; }
+label.active {
+  color: white;
+  font-size: 25px; }
 
-.navbar-custom .navbar-text {
-  color: #ffffff; }
+.input-field input[type=text] {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 white; }
 
-.navbar-custom .navbar-nav > li:last-child > a {
-  border-right: 1px solid #236c40; }
-
-.navbar-custom .navbar-nav > li > a {
-  color: #ffffff;
-  border-left: 1px solid #236c40; }
-
-.navbar-custom .navbar-nav > li > a:hover,
-.navbar-custom .navbar-nav > li > a:focus {
-  color: #c0c0c0;
-  background-color: transparent; }
-
-.navbar-custom .navbar-nav > .active > a,
-.navbar-custom .navbar-nav > .active > a:hover,
-.navbar-custom .navbar-nav > .active > a:focus {
-  color: #c0c0c0;
-  background-color: #236c40;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#236c40), to(#2f9257));
-  background-image: -webkit-linear-gradient(top, #236c40, 0%, #2f9257, 100%);
-  background-image: -moz-linear-gradient(top, #236c40 0%, #2f9257 100%);
-  background-image: linear-gradient(to bottom, #236c40 0%, #2f9257 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff236c40', endColorstr='#ff2f9257', GradientType=0); }
-
-.navbar-custom .navbar-nav > .disabled > a,
-.navbar-custom .navbar-nav > .disabled > a:hover,
-.navbar-custom .navbar-nav > .disabled > a:focus {
-  color: #cccccc;
-  background-color: transparent; }
-
-.navbar-custom .navbar-toggle {
-  border-color: #dddddd; }
-
-.navbar-custom .navbar-toggle:hover,
-.navbar-custom .navbar-toggle:focus {
-  background-color: #dddddd; }
-
-.navbar-custom .navbar-toggle .icon-bar {
-  background-color: #cccccc; }
-
-.navbar-custom .navbar-collapse,
-.navbar-custom .navbar-form {
-  border-color: #226a3f; }
-
-.navbar-custom .navbar-nav > .dropdown > a:hover .caret,
-.navbar-custom .navbar-nav > .dropdown > a:focus .caret {
-  border-top-color: #c0c0c0;
-  border-bottom-color: #c0c0c0; }
-
-.navbar-custom .navbar-nav > .open > a,
-.navbar-custom .navbar-nav > .open > a:hover,
-.navbar-custom .navbar-nav > .open > a:focus {
-  background-color: #236c40;
-  color: #c0c0c0; }
-
-.navbar-custom .navbar-nav > .open > a .caret,
-.navbar-custom .navbar-nav > .open > a:hover .caret,
-.navbar-custom .navbar-nav > .open > a:focus .caret {
-  border-top-color: #c0c0c0;
-  border-bottom-color: #c0c0c0; }
-
-.navbar-custom .navbar-nav > .dropdown > a .caret {
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff; }
-
-@media (max-width: 767) {
-  .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
-    color: #ffffff; }
-  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #c0c0c0;
-    background-color: transparent; }
-  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #c0c0c0;
-    background-color: #236c40; }
-  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a,
-  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:hover,
-  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #cccccc;
-    background-color: transparent; } }
-
-.navbar-custom .navbar-link {
-  color: #ffffff; }
-
-.navbar-custom .navbar-link:hover {
-  color: #c0c0c0; }
-
-.ng-scope {
-  z-index: 2;
-  position: relative; }
+a[ng-click] {
+  cursor: pointer; }
 
 body {
   background-color: #6b92b9;
