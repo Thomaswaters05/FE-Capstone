@@ -13,6 +13,7 @@
    <tbody>
        <tr ng-repeat="gift in gifts | filter:{isCompleted:false}"  class="highlight">
          <input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)">
+
          <td><i class="fa fa-tree"></i>{{gift.giftdescription}}</td>
          <td>$ {{gift.giftcost}}</td>
          <td><button ng-click="deleteGift(gift.id)" class="fa fa-minus-circle"></button> </td>
@@ -20,6 +21,8 @@
    </tbody>
 </table>
 <!-- *******CURRENT LIST LOGIC*********-->
+
+
 
 
 <!-- *****COMPLETED**** -->

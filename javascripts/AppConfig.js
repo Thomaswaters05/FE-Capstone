@@ -58,6 +58,16 @@ app.config(function($routeProvider){
       controller: 'AddFriendCtrl', // see new controller file
       resolve: {isAuth}
     })
+   .when('/gifts/view/:id',{
+      templateUrl: 'partials/itemview.html',
+      controller: 'GiftViewCtrl',
+      resolve: {isAuth}
+    })
+    .when('/gifts/edit/:id', {
+      templateUrl: '/partials/addgift.html',
+      controller: 'GiftEditCtrl',
+      resolve: {isAuth}
+    })
      .when('/wishlist/:id', {
       templateUrl: '/partials/userwishlist.html', //see partials folder
       controller: 'UserWishListCtrl', // see new controller file
