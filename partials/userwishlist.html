@@ -18,7 +18,7 @@
 
 
          <td ng-hide="editing" ng-click="editing = true"><i class="fa fa-tree"></i>{{gift.giftdescription}}</td>
-         <td ng-show="editing" ng-submit="editing = false">
+         <td ng-show="editing">
           <label>Edit:</label>
           <input type="text" ng-model="gift.giftdescription" placeholder="Name" ng-required/>
         </td>
@@ -26,7 +26,7 @@
 
          <td>$ {{gift.giftcost}}</td>
          <td><button ng-click="deleteGift(gift.id)" class="fa fa-minus-circle"></button> </td>
-         <td><button ng-click="editing = false" class="fa fa-pencil"><a></a></button><td>
+         <td><button ng-click="editGift(gift)" class="fa fa-pencil"><a></a></button><td>
        </tr>
    </tbody>
 </table>
