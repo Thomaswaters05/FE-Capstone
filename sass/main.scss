@@ -8,7 +8,15 @@ body {
     line-height: 26.4px;
 }
 
+div{
+    margin: 20px;
+}
 
+#navpic{
+    height: 64px;
+}
+
+// ***MAIN SASS BELOW***
 h1 {
     color: blue;
     // text-align: center;
@@ -19,6 +27,7 @@ h3{
   text-align: center;
 }
 
+// Styling for main screen (my lists, add item, third item)
  #mainz{
   text-align: center;
   font-size: 20px;
@@ -27,14 +36,14 @@ h3{
     }
 }
 
-td#budget{
-
-    margin: 20px;
-
-}
-
 .buttonMargin{
   margin: 80px;
+}
+
+
+// Materialize attempts to change
+table.highlight tbody tr:hover {
+    background-color: #ef5350  !important;
 }
 
 
@@ -111,3 +120,9 @@ body {
     -ms-animation: snow 20s linear infinite;
     animation: snow 20s linear infinite;
 }
+
+
+
+
+
+
