@@ -2,7 +2,7 @@
 
 <!-- *******CURRENT LIST LOGIC*********-->
 <h3>Wish List</h3>
-<table class="highlight centered">
+<table class="highlight striped centered">
    <thead>
        <tr>
          <th data-field="name">Item Name</th>
@@ -14,9 +14,19 @@
        <tr ng-repeat="gift in gifts | filter:{isCompleted:false}"  class="highlight">
          <input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)">
 
-         <td><i class="fa fa-tree"></i>{{gift.giftdescription}}</td>
+
+
+
+         <td ng-hide="editing" ng-click="editing = true"><i class="fa fa-tree"></i>{{gift.giftdescription}}</td>
+         <td ng-show="editing" ng-submit="editing = false">
+          <label>Edit:</label>
+          <input type="text" ng-model="gift.giftdescription" placeholder="Name" ng-required/>
+        </td>
+
+
          <td>$ {{gift.giftcost}}</td>
          <td><button ng-click="deleteGift(gift.id)" class="fa fa-minus-circle"></button> </td>
+         <td><button ng-click="editing = false" class="fa fa-pencil"><a></a></button><td>
        </tr>
    </tbody>
 </table>
@@ -25,6 +35,25 @@
 
 
 
+
+
+
+
+
+
+<!-- !!!****NOT USING IN CURRENT DEMO OR MODEL BELOW****!!! -->
+
+<!-- *****EDIT WORKING***NOT USING CURRENTLY****-->
+<!--  <div ng-repeat="gift in gifts">
+  <span ng-hide="editing" ng-click="editing = true">{{gift.giftdescription}}</span>
+  <form ng-show="editing" ng-submit="editing = false">
+    <label>Name:</label>
+    <input type="text" ng-model="gift.giftdescription" placeholder="Name" ng-required/>
+
+    <button class="btn" type="submit">Save</button>
+   </form>
+ </div> -->
+<!-- *****EDIT WORKING***NOT USING CURRENTLY****-->
 <!-- *****COMPLETED**** -->
 <!-- <h3>Purchased!</h3>
 <table class="highlight centered">
