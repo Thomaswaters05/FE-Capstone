@@ -7,6 +7,12 @@ body {
   font-weight: 500;
   line-height: 26.4px; }
 
+div {
+  margin: 20px; }
+
+#navpic {
+  height: 64px; }
+
 h1 {
   color: blue; }
 
@@ -25,6 +31,9 @@ td#budget {
 
 .buttonMargin {
   margin: 80px; }
+
+table.highlight tbody tr:hover {
+  background-color: #ef5350  !important; }
 
 textarea:focus, input:focus {
   color: #00695c; }

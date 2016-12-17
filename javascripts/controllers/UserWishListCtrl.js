@@ -34,6 +34,12 @@ $scope.inputChange = function(thing1){//this function will change the checkbox t
   }
 
 
+$scope.editGift = function(giftNamez){
+  WishListFactory.editGifts(giftNamez).then(function(whatevz){
+    getGifts();
+  });
+
+};
 
 
 
