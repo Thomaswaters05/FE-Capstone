@@ -6,6 +6,7 @@ app.controller("FriendListCtrl", function($scope, $rootScope, $location, FriendF
   $scope.total = 0;
 
   let getFriends = function(){
+    $scope.total = 0;
     console.log($rootScope.user.uid);
     FriendFactory.getFriend($rootScope.user.uid).then(function(friends){
       console.log('friends',friends);
@@ -24,7 +25,6 @@ app.controller("FriendListCtrl", function($scope, $rootScope, $location, FriendF
       $scope.friends = friends;
 
     });
-
 
   };
   getFriends();
