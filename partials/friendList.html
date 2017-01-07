@@ -1,30 +1,31 @@
 <!-- *******CURRENT LIST LOGIC********* -->
-<h3>Current Lists</h3>
-<table class="centered">
-   <thead>
-       <tr>
-        <th data-field="name">List Name</th>
-         <th data-field="price">Total List Amount</th>
-       </tr>
-   </thead>
+<h3><b>Current Lists<b></h3>
+<div class="container">
+  <table class="centered">
+     <thead>
+         <tr style="border:0;">
+          <th data-field="name">List Name</th>
+           <th data-field="price">Total List Amount</th>
+         </tr>
+     </thead>
 
-   <tbody>
-       <tr ng-repeat="friend in friends | filter:{isCompleted:false}| filter: searchText" class="highlight">
-         <input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)">
-         <td><a class="waves-effect waves-light btn" href="#/wishlist/{{friend.id}}"><i class="fa fa-tree"></i> {{friend.name}}</a></td>
-         <td>${{friend.sumOfGifts}}</td>
-         <td><button ng-click="deleteFriend(friend.id)" class="fa fa-minus-circle"></button> </td>
-       </tr>
-   </tbody>
-</table>
-
-<table class="centered">
-  <div ng-model="total">
-    <td id="budget">You Must Save : ${{total}}</td>
-  </div>
- <table class="centered">
+  <hr class="colorgraph">
+     <tbody class="pushUp">
+         <tr ng-repeat="friend in friends | filter:{isCompleted:false}| filter: searchText" class="highlight">
+           <input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)">
+           <td><a class="waves-effect waves-light btn" href="#/wishlist/{{friend.id}}"><i class="fa fa-tree"></i> {{friend.name}}</a></td>
+           <td><b>${{friend.sumOfGifts}}</b></td>
+           <td><button ng-click="deleteFriend(friend.id)" class="fa fa-minus-circle fa-fw"></button> </td>
+         </tr>
+     </tbody>
+  </table>
+<hr class="colorgraph">
+  <table class="centered">
+    <div ng-model="total">
+      <td><b>You have 12 Months to Budget :</b> <br> <br><div id="budget">${{total}}</div> </td>
+    </div>
+</div>
 <!-- *******CURRENT LIST LOGIC********* -->
-
 
 
 

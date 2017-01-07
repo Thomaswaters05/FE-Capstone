@@ -1,35 +1,40 @@
- <a class="waves-effect waves-light btn" ng-click="addGiftGo()">Add Gift</a>
+
 
 <!-- *******CURRENT LIST LOGIC*********-->
 <h3>Wish List</h3>
-<table class="highlight striped centered">
-   <thead>
-       <tr>
-         <th data-field="name">Item Name</th>
-         <th data-field="price">Item Price</th>
-       </tr>
-   </thead>
 
-   <tbody>
-       <tr ng-repeat="gift in gifts | filter:{isCompleted:false}"  class="highlight">
-         <input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)">
+<div class="container">
+  <table class="highlight striped centered">
+     <thead>
+         <tr>
+           <th data-field="name">Item Name</th>
+           <th data-field="price">Item Price</th>
+         </tr>
+     </thead>
 
-
-
-
-         <td ng-hide="editing" ng-click="editing = true"><i class="fa fa-tree"></i>{{gift.giftdescription}}</td>
-         <td ng-show="editing">
-          <label>Edit:</label>
-          <input type="text" ng-model="gift.giftdescription" placeholder="Name" ng-required/>
-        </td>
+     <tbody>
+         <tr ng-repeat="gift in gifts | filter:{isCompleted:false}"  class="highlight">
+           <input type="checkbox" ng-model="giftdescription.isCompleted" ng-change="inputChange(gift)">
 
 
-         <td>$ {{gift.giftcost}}</td>
-         <td><button ng-click="deleteGift(gift.id)" class="fa fa-minus-circle"></button> </td>
-         <td><button ng-click="editGift(gift)" class="fa fa-pencil"><a></a></button><td>
-       </tr>
-   </tbody>
-</table>
+
+
+           <td ng-hide="editing" ng-click="editing = true"><i class="fa fa-tree"></i>{{gift.giftdescription}}</td>
+           <td ng-show="editing">
+            <label>Edit:</label>
+            <input type="text" ng-model="gift.giftdescription" placeholder="Name" ng-required/>
+          </td>
+
+
+           <td>$ {{gift.giftcost}}</td>
+           <td><button ng-click="deleteGift(gift.id)" class="fa fa-minus-circle"></button> </td>
+           <td><button ng-click="editGift(gift)" class="fa fa-pencil"><a></a></button><td>
+         </tr>
+     </tbody>
+  </table>
+  <a class="waves-effect waves-light btn" ng-click="addGiftGo()">Add Gift</a>
+</div>
+
 <!-- *******CURRENT LIST LOGIC*********-->
 
 

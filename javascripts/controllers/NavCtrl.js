@@ -1,6 +1,8 @@
 "use strict";
 
-app.controller("NavCtrl", function($scope){
+// main nav below
+
+app.controller("NavCtrl", function($scope, $rootScope, UserFactory){
   $scope.navItems = [
     {
       name:"Logout",
@@ -14,5 +16,38 @@ app.controller("NavCtrl", function($scope){
       name:"New Gifts",
       url:"#/friend-new"
   }
-  ];    // this is making an array and calling it navitems - THESE ITEMS NEED TO MATCH AS THEY DO IN HTML (NAV)
+  ];
 });
+
+// side nav below
+
+app.controller("NavCtrl", function($scope, $rootScope, UserFactory){
+
+  $scope.navItems = [{
+    name:"Logout",
+    url: "#/logout"
+  },
+  {
+    name:"All Items",
+    url: "#/users/profile"
+  },
+  {
+    name:"Search Item",
+    url:"#/users/google"
+  }
+  ];
+
+
+$('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 240
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens
+    }
+  );
+});
+
+$(document).ready(function() {
+      Materialize.fadeInImage('#profilepic');
+     Materialize.showStaggeredList('#staggered-list');
+      });
