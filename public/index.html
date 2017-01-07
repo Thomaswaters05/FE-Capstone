@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FE-Capstone</title>
+  <link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Mountains+of+Christmas" />
+
+
+</head>
+<body ng-app="GiftApp">
+
+<div ng-include="'./partials/navbar.html'"></div>
+
+  <div class="row">
+    <div class="col-xs-offset-2 col-xs-8" ng-view></div>
+  </div>
+
+
+
+
+
+<!-- ***FIREBASE, NG, BOOTSRAP BELOW*** -->
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script type="text/javascript" src="/lib/bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="/lib/bower_components/angular-route/angular-route.min.js"></script>
+
+
+
+
+<!-- ***APP LINK BELOW*** -->
+<script src="/javascripts/app.js"></script>
+<script src="/javascripts/AppConstants.js"></script>
+<script src="/javascripts/AppConfig.js"></script>
+
+<!-- ***FACTORIES BELOW*** -->
+<script type="text/javascript" src="/javascripts/factories/AuthFactory.js"></script>
+<script type="text/javascript" src="/javascripts/factories/UserFactory.js"></script>
+<script type="text/javascript" src="/javascripts/factories/FriendFactory.js"></script>
+<script type="text/javascript" src="/javascripts/factories/WishListFactory.js"></script>
+
+
+
+<!-- ***CONTROLLERS BELOW*** -->
+<script type="text/javascript" src="/javascripts/controllers/AuthCtrl.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/NavCtrl.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/FriendListCtrl.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/AddFriendCtrl.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/GiftEditCtrl.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/GiftViewCtrl.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/UserWishListCtrl.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/AddGiftCtrl.js"></script>
+
+
+
+
+
+
+</body>
+</html>
