@@ -1,5 +1,10 @@
+<!-- **TOP NAV** -->
+
 <nav class="nav-wrapper" ng-controller="NavCtrl">
-<a href="#" class="brand-logo">ReGALO</a>
+
+<a href="#" class="brand-logo "><i style="position: relative; margin: 13px;" class="fa fa-bars" aria-hidden="true"></i></a>
+
+<a href="#" class="brand-logo center"><i style="position: relative; margin-left: 20px;" class="fa fa-gift fa-2x" aria-hidden="true"></i>ReGALO</a>
 
  <div class="container-fluid">
         <div class="navbar-header"><a class="navbar-brand"></a>
@@ -9,20 +14,48 @@
 
         <div class="collapse navbar-collapse navbar-menubuilder">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#/gift-main"">Home</a>
+                <li><a  style="font-size:1.2rem;" href="#/gift-main">Home</a>
                 </li>
-                <li><a href="#/friend-list">My Lists</a>
+                <li><a  style="font-size:1.2rem;" href="#/friend-list">My Lists</a>
                 </li>
-                <li><a href="#/friend-new">Add New List</a>
+                <li><a  style="font-size:1.2rem;" href="#/friend-new">Add New List</a>
                 </li>
-                <li><a href="www.ADDLIST.com">About Us</a>
+                <li><a   style="font-size:1.2rem;" href="#">About Us</a>
                 </li>
             </ul>
         </div>
     </div>
-
 </nav>
 
+<!-- **TOP NAV** -->
 
-<!-- NO LONGER USING -->
+
+<!-- **SIDE NAV** -->
+
+ <ul id="slide-out" ng-controller="NavCtrl" ng-show="user"  class="side-nav grey darken-4 blue-grey-text text-lighten-4 go"> <br />
+
+    <div style="text-align:center;" id="profilepic">
+      <img src="./img/twprofile.jpg" alt="" class="circle responsive-img" width="200"> <br />
+      Thomas Waters
+      <br>
+      <h6>Thomas.Waters05@Gmail.Com</h6>
+    </div> <br /> <br />
+        <li><a  class="green-text text-lighten-1" href="#/gift-main"><i class="fa fa-user fa-3x fa-fw"></i>Home</a></li>
+        <br>
+        <li><a id="links" class="white-text lighten-1" href="https://www.amazon.com" target="_newtab"><i class="fa fa-shopping-basket fa-3x fa-fw"></i>Shop More!!</a></li >
+        <br>
+        <li><a id="links" class="blue-text text-lighten-2" href="#"><i class="fa fa-code fa-3x fa-fw"></i>Source Code</a></li>
+    </ul>
+
+
+
+<!-- **SIDE NAV** -->
+
+<div class="navBtn">
+  <a href="#" data-activates="slide-out" class="button-collapse" ng-show="user"><i class="material-icons"><i class="fa fa-address-card-o" aria-hidden="true"></i></i></a>
+</div>
+
+
+
+
 

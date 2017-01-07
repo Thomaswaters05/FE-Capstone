@@ -1,0 +1,98 @@
+body {
+  background-image: url(/img/brushed_alu_dark.png);
+  font-family: "Mountains of Christmas";
+  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px; }
+
+div {
+  margin: 20px; }
+
+#navpic {
+  height: 64px; }
+
+h1 {
+  color: blue; }
+
+h3 {
+  color: #00695c;
+  text-align: center; }
+
+#mainz {
+  text-align: center;
+  font-size: 20px; }
+  #mainz li {
+    margin: 50px; }
+
+.buttonMargin {
+  margin: 80px; }
+
+table.highlight tbody tr:hover {
+  background-color: #ef5350  !important; }
+
+textarea:focus, input:focus {
+  color: #00695c; }
+
+table {
+  color: #00695c;
+  font-size: 30px; }
+
+label.active {
+  color: white;
+  font-size: 25px; }
+
+#cardz {
+  text-align: center; }
+
+a[ng-click] {
+  cursor: pointer; }
+
+body {
+  background-color: #6b92b9;
+  background-image: url("http://i.imgur.com/BiSmXaq.png"), url("http://i.imgur.com/XHuy0NJ.png"), url("http://i.imgur.com/okpRxJU.png"); }
+
+@-webkit-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px; }
+  50% {
+    background-color: #b4cfe0; }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+    background-color: #6b92b9; } }
+
+@-moz-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px; }
+  50% {
+    background-color: #b4cfe0; }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+    background-color: #6b92b9; } }
+
+@-ms-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px; }
+  50% {
+    background-color: #b4cfe0; }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+    background-color: #6b92b9; } }
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px; }
+  50% {
+    background-color: #b4cfe0; }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+    background-color: #6b92b9; } }
+
+body {
+  background-color: #6b92b9;
+  background-image: url("http://i.imgur.com/BiSmXaq.png"), url("http://i.imgur.com/XHuy0NJ.png"), url("http://i.imgur.com/okpRxJU.png");
+  -webkit-animation: snow 20s linear infinite;
+  -moz-animation: snow 20s linear infinite;
+  -ms-animation: snow 20s linear infinite;
+  animation: snow 20s linear infinite; }
